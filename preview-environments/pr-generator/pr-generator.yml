@@ -11,7 +11,9 @@ spec:
       github:
         owner: sebquarez
         repo: gitops-cert-level-3-examples
-      requeueAfterSeconds: 180
+        labels:
+        - preview-ready
+      requeueAfterSeconds: 10
   template:
     metadata:
       name: 'myapp-{{.branch}}'
